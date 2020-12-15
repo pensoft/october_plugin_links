@@ -17,6 +17,8 @@ class BuilderTableCreatePensoftLinksLink extends Migration
             $table->integer('category_id');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
+            $table->integer('sort_order')->default(0);
+
         });
     }
     

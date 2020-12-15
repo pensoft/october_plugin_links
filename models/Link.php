@@ -2,13 +2,13 @@
 
 use Model;
 
-
 /**
  * Model
  */
 class Link extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sortable;
     
 
     /**
@@ -26,4 +26,10 @@ class Link extends Model
         'category' => [Category::class, 'key' => 'category_id', 'otherKey' => 'id']
     ];
 
+    public function beforeValidate()
+    {
+        if (empty($this->sort_order)) {
+            $this->sort_order = static::max('sort_order') + 1;
+        }
+    }
 }
