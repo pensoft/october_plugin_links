@@ -1,4 +1,5 @@
 title: Links
 modelClass: Pensoft\Links\Models\Link
+nameFrom: title
 toolbar:
     buttons: reorder_toolbar
