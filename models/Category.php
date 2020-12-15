@@ -15,7 +15,7 @@ class Category extends Model
      */
     public $timestamps = false;
 
-
+    public $rules = [];
     /**
      * @var string The database table used by the model.
      */

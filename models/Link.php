@@ -20,6 +20,8 @@ class Link extends Model
         'cover' => 'System\Models\File'
     ];
 
+    public $rules = [];
+
     public $belongsTo = [
         'category' => [Category::class, 'key' => 'category_id', 'otherKey' => 'id']
     ];
